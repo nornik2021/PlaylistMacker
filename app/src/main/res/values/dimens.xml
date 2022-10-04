@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size">22sp</dimen>
+    <dimen name="margin_left_title">16dp</dimen>
+    <dimen name="margin_right">15dp</dimen>
+    <dimen name="margin_left_others">17dp</dimen>
+    <dimen name="button_width">328dp</dimen>
+    <dimen name="button_height">220dp</dimen>
+    <dimen name="between_buttons">16dp</dimen>
+    <dimen name="radius">16dp</dimen>
+    <dimen name="layout_layout_width">304dp</dimen>
+    <dimen name="layout_Layout_height">48dp</dimen>
+    <dimen name="layout_layout_marginLeft">4dp</dimen>
+    <dimen name="layout_layout_marginTop">4dp</dimen>
+    <dimen name="layout_layout_marginRight">52dp</dimen>
+    <dimen name="textSize">22sp</dimen>
+    <dimen name="relative_width">360dp</dimen>
+    <dimen name="relative_height">61dp</dimen>
+    <dimen name="textView_width">300dp</dimen>
+    <dimen name="textView_height">19dp</dimen>
+    <dimen name="TextView_mL">16dp</dimen>
+    <dimen name="TextView_mT">21dp</dimen>
+    <dimen name="TextView_mB">21dp</dimen>
+    <dimen name="TextView_ts">16sp</dimen>
+    <dimen name="Button_width">40dp</dimen>
+    <dimen name="Button_height">40dp</dimen>
+    <dimen name="Button_marginLeft">328dp</dimen>
+    <dimen name="Button_marginTop">12dp</dimen>
+
+
+</resources>
