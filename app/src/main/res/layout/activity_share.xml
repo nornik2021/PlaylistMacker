@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShareActivity"
+    android:background="?attr/colorOnPrimary"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/recipientEt"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/black"
+        android:hint="nornik2019@gmail.com"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/subjectEt"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/black"
+        android:hint="Сообщение разработчикам и
+        разработчицам приложения Playlist Maker"
+        android:inputType="textMultiLine"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        />
+
+
+    <EditText
+        android:id="@+id/messageEt"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/black"
+        android:hint="Спасибо разработчикам и разработчицам
+        за крутое приложение!"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/sendEmailBtn"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Отправить сообщение" />
+
+</LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="?attr/colorOnPrimary"
     android:orientation="vertical"
     tools:context=".SearchActivity">
 
@@ -14,24 +14,14 @@
         android:layout_height="@dimen/layout_Layout_height"
         android:layout_marginStart="@dimen/layout_layout_marginLeft"
         android:layout_marginTop="@dimen/layout_layout_marginTop"
-        android:layout_marginEnd="@dimen/layout_layout_marginRight">
+        android:layout_marginEnd="@dimen/layout_layout_marginRight"
+        android:background="?attr/colorOnPrimary">
 
         <Button
+            style="@style/ButtonStyle3"
             android:id = "@+id/vector"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:paddingStart="64px"
-            android:paddingEnd="186px"
             android:text="@string/setting"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="@dimen/textSize"
-            app:icon="@drawable/ic_strelka"
-            app:iconGravity="textStart"
-            app:iconPadding="28dp"
-            app:iconTint="@color/black" />
+            app:icon="@drawable/ic_strelka" />
 
     </LinearLayout>
 
@@ -39,22 +29,14 @@
         android:id="@+id/lists"
         android:layout_width="@dimen/relative_width"
         android:layout_height="@dimen/relative_height"
-        android:layout_marginTop="80px">
+        android:layout_marginTop="80px"
+        android:background="?attr/colorOnPrimary"
+        >
 
         <TextView
+            style="@style/TextView1"
             android:id="@+id/ys_regular_"
-            android:layout_width="@dimen/textView_width"
-            android:layout_height="@dimen/textView_height"
-
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/TextView_mL"
-            android:layout_marginTop="@dimen/TextView_mT"
-            android:layout_marginBottom="@dimen/TextView_mB"
-            android:gravity="top"
-            android:text="@string/dark"
-            android:textAllCaps="false"
-            android:textAppearance="@style/ys_regular_"
-            android:textSize="@dimen/TextView_ts">
+            android:text="@string/dark">
 
         </TextView>
 
@@ -74,91 +56,40 @@
         android:id="@+id/lists2"
         android:layout_width="@dimen/relative_width"
         android:layout_height="@dimen/relative_height"
-        android:layout_marginTop="0dp">
+        android:layout_marginTop="0dp"
+        android:backgroundTint="?attr/colorOnPrimary">
 
 
         <TextView
             android:id="@+id/ys_regular_2"
-            android:layout_width="@dimen/textView_width"
-            android:layout_height="@dimen/textView_height"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/TextView_mL"
-            android:layout_marginTop="@dimen/TextView_mT"
-            android:layout_marginBottom="@dimen/TextView_mB"
-            android:gravity="top"
-            android:text="@string/share_The_App"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="@dimen/TextView_ts" />
+            style="@style/TextView1"
+            android:text="@string/share_The_App" />
 
         <Button
             android:id="@+id/vector2"
-            android:layout_width="@dimen/Button_width"
-            android:layout_height="@dimen/Button_height"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/Button_marginLeft"
-            android:layout_marginTop="@dimen/Button_marginTop"
-            android:layout_marginEnd="-1dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/white"
-            android:shadowColor="@color/black"
-            android:textAllCaps="false"
+            style="@style/ButtonStyle2"
+            app:icon="@drawable/ic_galka" />
 
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/black"
-            app:icon="@drawable/ic_galka"
-            app:iconGravity="textEnd"
-            app:iconTint="@color/black" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/lists3"
         android:layout_width="@dimen/relative_width"
         android:layout_height="@dimen/relative_height"
-
+        android:backgroundTint="?attr/colorOnPrimary"
         android:layout_marginTop="0dp"
 
         >
 
         <Button
             android:id="@+id/vector3"
-            android:layout_width="@dimen/Button_width"
-            android:layout_height="@dimen/Button_height"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/Button_marginLeft"
-            android:layout_marginTop="@dimen/Button_marginTop"
-            android:layout_marginEnd="-1dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/white"
-            android:shadowColor="@color/black"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/black"
-            app:icon="@drawable/ic_ph"
-            app:iconGravity="textEnd"
-            app:iconTint="@color/black" />
+            style="@style/ButtonStyle2"
+            app:icon="@drawable/ic_group" />
 
         <TextView
             android:id="@+id/ys_regular_3"
-            android:layout_width="@dimen/textView_width"
-            android:layout_height="@dimen/textView_height"
-
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/TextView_mL"
-            android:layout_marginTop="@dimen/TextView_mT"
-            android:layout_marginBottom="@dimen/TextView_mB"
-            android:gravity="top"
-            android:text="@string/write_to_support"
-            android:textAppearance="@style/ys_regular_"
-            android:textSize="@dimen/TextView_ts">
+            style="@style/TextView1"
+            android:text="@string/write_to_support">
 
         </TextView>
     </RelativeLayout>
@@ -167,44 +98,19 @@
         android:id="@+id/lists4"
         android:layout_width="@dimen/relative_width"
         android:layout_height="@dimen/relative_height"
-        android:layout_marginTop="0dp">
-
+        android:layout_marginTop="0dp"
+        android:backgroundTint="?attr/colorOnPrimary">
 
 
         <Button
             android:id="@+id/vector4"
-            android:layout_width="@dimen/Button_width"
-            android:layout_height="@dimen/Button_height"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/Button_marginLeft"
-            android:layout_marginTop="@dimen/Button_marginTop"
-            android:layout_marginEnd="-1dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/white"
-            android:shadowColor="@color/black"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/black"
-            app:icon="@drawable/ic_ygol"
-            app:iconGravity="textEnd"
-            app:iconTint="@color/black" />
+            style="@style/ButtonStyle2"
+            app:icon="@drawable/ic_ygol" />
 
         <TextView
+            style="@style/TextView1"
             android:id="@+id/ys_regular_4"
-            android:layout_width="@dimen/textView_width"
-            android:layout_height="@dimen/textView_height"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="@dimen/TextView_mL"
-            android:layout_marginTop="@dimen/TextView_mT"
-            android:layout_marginBottom="@dimen/TextView_mB"
-            android:gravity="top"
-            android:text="@string/terms_of_use"
-            android:textAppearance="@style/ys_regular_"
-            android:textSize="@dimen/TextView_ts">
+            android:text="@string/terms_of_use">
 
         </TextView>
     </RelativeLayout>
