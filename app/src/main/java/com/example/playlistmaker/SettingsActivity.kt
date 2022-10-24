@@ -5,28 +5,29 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        val settingsButton4 = findViewById<Button>(R.id.vector4)
-        val settingsButton3 = findViewById<Button>(R.id.vector3)
-        val settingsButton2 = findViewById<Button>(R.id.vector2)
+        val settingsButtonBrowse = findViewById<ImageButton>(R.id.vectorBrowse)
+        val settingsButtonShare = findViewById<ImageButton>(R.id.vectorShare)
+        val settingsButtonDialog = findViewById<ImageButton>(R.id.vectorDialog)
 
-        settingsButton4.setOnClickListener {
+        settingsButtonBrowse.setOnClickListener {
             val browseIntent = Intent(Intent.ACTION_VIEW,
                 Uri.parse("https://yandex.ru/legal/practicum_offer/"))
             startActivity(browseIntent)
         }
-        settingsButton3.setOnClickListener {
-            val settingsIntent2 = Intent(this, ShareActivity::class.java)
-            startActivity(settingsIntent2)
+        settingsButtonShare.setOnClickListener {
+            val settingsIntentShare = Intent(this, ShareActivity::class.java)
+            startActivity(settingsIntentShare)
         }
-        settingsButton2.setOnClickListener {
-            val settingsIntent4 = Intent(this, DialogActivity::class.java)
-            startActivity(settingsIntent4)
+        settingsButtonDialog.setOnClickListener {
+            val settingsIntentDialog = Intent(this, DialogActivity::class.java)
+            startActivity(settingsIntentDialog)
 
         }
     }

@@ -14,25 +14,24 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:backgroundTint="@color/black"
-        android:hint="nornik2019@gmail.com"
+        android:hint="@string/nornik2019_gmail_com"
         android:inputType="textEmailAddress"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        />
+        android:textSize="20sp"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/subjectEt"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:backgroundTint="@color/black"
-        android:hint="Сообщение разработчикам и
-        разработчицам приложения Playlist Maker"
+        android:hint="@string/playlist_maker"
         android:inputType="textMultiLine"
         android:selectAllOnFocus="false"
         android:singleLine="false"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        />
+        android:textSize="20sp"
+        android:autofillHints="" />
 
 
     <EditText
@@ -40,18 +39,17 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:backgroundTint="@color/black"
-        android:hint="Спасибо разработчикам и разработчицам
-        за крутое приложение!"
+        android:hint="@string/Spasibo"
         android:inputType="textMultiLine"
         android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:textSize="20sp"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/sendEmailBtn"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:text="Отправить сообщение" />
+        android:text="@string/sharing" />
 
 </LinearLayout>

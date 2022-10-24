@@ -32,9 +32,9 @@ class ShareActivity : AppCompatActivity() {
         val mIntent = Intent(Intent.ACTION_SEND)
         mIntent.data = Uri.parse("mailto:")
         mIntent.type = "text/plain"
-        mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(recipient))
-        mIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
-        mIntent.putExtra(Intent.EXTRA_TEXT, message)
+        mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("nornik2019@gmail.com"))
+        mIntent.putExtra(Intent.EXTRA_SUBJECT, "Сообщение разработчикам и разработчицам приложения Playlist Maker")
+        mIntent.putExtra(Intent.EXTRA_TEXT, "Спасибо разработчикам и разработчицам за крутое приложение!")
 
         try {
             startActivity(Intent.createChooser(mIntent, "Choose Email Client..."))

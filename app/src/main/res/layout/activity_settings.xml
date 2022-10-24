@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/layout"
-        android:layout_width="@dimen/layout_layout_width"
-        android:layout_height="@dimen/layout_Layout_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/layout_layout_marginLeft"
         android:layout_marginTop="@dimen/layout_layout_marginTop"
         android:layout_marginEnd="@dimen/layout_layout_marginRight"
@@ -25,36 +25,35 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/lists"
-        android:layout_width="@dimen/relative_width"
+        android:layout_width="369dp"
         android:layout_height="@dimen/relative_height"
         android:layout_marginTop="80px"
-        android:background="?attr/colorOnPrimary"
-        >
+        android:background="?attr/colorOnPrimary">
 
         <TextView
-            style="@style/TextView1"
             android:id="@+id/ys_regular_"
+            style="@style/TextView1"
             android:text="@string/dark">
 
         </TextView>
 
         <Switch
             android:id="@+id/knob"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:rotationX="-8"
+            android:layout_gravity="end"
             android:visibility="visible"
             tools:ignore="UseSwitchCompatOrMaterialXml">
 
         </Switch>
 
-    </RelativeLayout>
+    </FrameLayout>
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/lists2"
-        android:layout_width="@dimen/relative_width"
+        android:layout_width="394dp"
         android:layout_height="@dimen/relative_height"
         android:layout_marginTop="0dp"
         android:backgroundTint="?attr/colorOnPrimary">
@@ -65,26 +64,26 @@
             style="@style/TextView1"
             android:text="@string/share_The_App" />
 
-        <Button
-            android:id="@+id/vector2"
+        <ImageButton
+            android:id="@+id/vectorDialog"
             style="@style/ButtonStyle2"
-            app:icon="@drawable/ic_galka" />
+            android:src="@drawable/ic_galka" />
 
-    </RelativeLayout>
+    </FrameLayout>
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/lists3"
-        android:layout_width="@dimen/relative_width"
+        android:layout_width="394dp"
         android:layout_height="@dimen/relative_height"
-        android:backgroundTint="?attr/colorOnPrimary"
         android:layout_marginTop="0dp"
+        android:backgroundTint="?attr/colorOnPrimary"
 
         >
 
-        <Button
-            android:id="@+id/vector3"
+        <ImageButton
+            android:id="@+id/vectorShare"
             style="@style/ButtonStyle2"
-            app:icon="@drawable/ic_group" />
+            android:src="@drawable/ic_group" />
 
         <TextView
             android:id="@+id/ys_regular_3"
@@ -92,28 +91,27 @@
             android:text="@string/write_to_support">
 
         </TextView>
-    </RelativeLayout>
+    </FrameLayout>
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/lists4"
-        android:layout_width="@dimen/relative_width"
+        android:layout_width="394dp"
         android:layout_height="@dimen/relative_height"
         android:layout_marginTop="0dp"
         android:backgroundTint="?attr/colorOnPrimary">
 
 
-        <Button
-            android:id="@+id/vector4"
+        <ImageButton
+            android:id="@+id/vectorBrowse"
             style="@style/ButtonStyle2"
-            app:icon="@drawable/ic_ygol" />
+            android:src="@drawable/ic_ygol" />
 
         <TextView
-            style="@style/TextView1"
             android:id="@+id/ys_regular_4"
+            style="@style/TextView1"
             android:text="@string/terms_of_use">
 
         </TextView>
-    </RelativeLayout>
-
+    </FrameLayout>
 </LinearLayout>
 

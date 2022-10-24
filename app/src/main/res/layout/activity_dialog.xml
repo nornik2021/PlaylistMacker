@@ -10,15 +10,17 @@
 
     <Button
         android:id="@+id/showAlertDialogBtn"
-        android:text="Выбор приложения для отправки"
+        android:text="@string/applicationSelection"
+        android:textColor="?attr/colorOnSecondary"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorOnPrimary"/>
 
     <TextView
         android:id="@+id/txtView"
         android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="https://practicum.yandex.ru/learn/android-developer/courses" />
+        android:text="@string/practicum_yandex_" />
 
 </LinearLayout>
