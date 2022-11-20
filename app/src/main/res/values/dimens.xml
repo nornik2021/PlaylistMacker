@@ -26,6 +26,7 @@
     <dimen name="Button_height">40dp</dimen>
     <dimen name="Button_marginLeft">328dp</dimen>
     <dimen name="Button_marginTop">12dp</dimen>
+    <dimen name="paddingEnd">20dp</dimen>
 
 
 </resources>

@@ -3,65 +3,79 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_height="64dp"
+    android:background="?attr/colorOnPrimary"
+    >
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="20dp"
         android:background="?attr/colorOnPrimary">
 
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="101dp"
-            android:layout_height="95dp"
-            android:background="?attr/colorOnPrimary"
+            android:id="@+id/imagePoster"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/trackName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="-2dp"
-            tools:layout_editor_absoluteY="83dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/trackName"
+            android:layout_width="250dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
             android:background="?attr/colorOnPrimary"
-            android:text="Yesterday"
+            android:fontFamily="@font/ys_display_regular"
+            android:textColor="@color/black2"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imagePoster"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="112dp"
-            tools:layout_editor_absoluteY="101dp" />
+            tools:text="Track Name" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/artistNameAndTime"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="13dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="16dp"
             android:background="?attr/colorOnPrimary"
-            android:text="The Beatles "
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="112dp"
-            tools:layout_editor_absoluteY="143dp" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorOnPrimary"
-            android:text="TextView"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="189dp"
-            tools:layout_editor_absoluteY="143dp" />
+            android:fontFamily="@font/ys_display_regular"
+            android:textColor="@color/grey"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imagePoster"
+            app:layout_constraintTop_toBottomOf="@+id/trackName"
+            tools:ignore="MissingConstraints,TextContrastCheck"
+            tools:text="ArtistAndTime" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/ygol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
             android:background="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_ygol"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="353dp"
-            tools:layout_editor_absoluteY="120dp" />
+            tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

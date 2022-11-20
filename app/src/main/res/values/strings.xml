@@ -16,5 +16,10 @@
     <string name="playlist_maker">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
     <string name="Spasibo">Спасибо разработчикам и разработчицам за крутое приложение!</string>
     <string name="sharing">Отправить сообщение</string>
+    <string name="offer">https://yandex.ru/legal/practicum_offer/</string>
+    <string name="Search">Поиск</string>
+    <string name="title_and_time">%s • %s</string>
+    <string name="run_track">Перейти к треку</string>
+    <string name="imagePoster">Изображение альбома</string>
 
 </resources>

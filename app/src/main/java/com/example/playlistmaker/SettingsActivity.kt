@@ -20,7 +20,7 @@ class SettingsActivity : AppCompatActivity() {
 
         settingsButtonBrowse.setOnClickListener {
             val browseIntent = Intent(Intent.ACTION_VIEW,
-                Uri.parse("https://yandex.ru/legal/practicum_offer/"))
+                Uri.parse(getString(R.string.offer)))
             startActivity(browseIntent)
         }
 
