@@ -1,12 +1,14 @@
 package com.example.playlistmaker
 
 import android.view.LayoutInflater
+import android.view.RoundedCorner
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
 class SearchAdapter(
     private val tracks: List<Track>
@@ -45,6 +47,8 @@ class SearchAdapter(
             Glide.with(view.context)
                 .load(track.artworkUrl100)
                 .centerCrop()
+                .transform(RoundedCorners(2))
+                .placeholder(R.drawable.ic_placeholder)
                 .into(imagePoster)
             val template = view.context.getString(R.string.title_and_time)
             artistNameAndTime.text = String.format(template,track.artistName, track.trackTime)
@@ -53,3 +57,5 @@ class SearchAdapter(
     }
 
 }
+
+
