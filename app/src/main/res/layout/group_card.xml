@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/layout_height"
+    android:background="?attr/colorOnPrimary"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:paddingStart="5dp"
+        android:paddingEnd="20dp"
+        android:background="?attr/colorOnPrimary">
+
+
+        <ImageView
+            android:id="@+id/imagePoster"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="@dimen/Button_marginTop"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/trackName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/trackName"
+            android:layout_width="250dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="@dimen/layout_marginStart"
+            android:layout_marginTop="14dp"
+            android:background="?attr/colorOnPrimary"
+            android:fontFamily="@font/ys_display_regular"
+            android:textColor="@color/black2"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imagePoster"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:text="Track Name" />
+
+        <TextView
+            android:id="@+id/artistNameAndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_marginStart="@dimen/layout_marginStart"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/colorOnPrimary"
+            android:fontFamily="@font/ys_display_regular"
+            android:textColor="@color/grey"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imagePoster"
+            app:layout_constraintTop_toBottomOf="@+id/trackName"
+            tools:ignore="MissingConstraints,TextContrastCheck"
+            tools:text="ArtistAndTime" />
+
+        <ImageView
+            android:id="@+id/ygol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_ygol"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

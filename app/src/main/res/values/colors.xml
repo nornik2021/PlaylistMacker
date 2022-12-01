@@ -10,4 +10,9 @@
     <color name="background_color">#3772E7</color>
     <color name="prime_neutral">#DDFFFFFF</color>
     <color name="prime_positive">#FFFFFFFF</color>
+    <color name="grey">#AEAFB4</color>
+    <color name="grey2">#E6E8EB</color>
+    <color name="black2">#000000
+    </color>
+    
 </resources>
