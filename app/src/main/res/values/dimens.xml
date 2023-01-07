@@ -30,5 +30,9 @@
     <dimen name="layout_marginStart">8dp</dimen>
     <dimen name="layout_marginTop">8dp</dimen>
     <dimen name="layout_height">64dp</dimen>
+    <dimen name="refresh_button_size">14sp</dimen>
+    <dimen name="size_setting">16sp</dimen>
+    <dimen name="bottom_and_top">21dp</dimen>
+    <dimen name="setting_left_padding">16dp</dimen>
 
 </resources>
