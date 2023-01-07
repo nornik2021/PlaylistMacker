@@ -6,8 +6,20 @@
     <string name="media_library">Медиатека</string>
     <string name="setting">Настройки</string>
     <string name="share_The_App">Поделится приложением</string>
-    <string name="write_to_support">Написать в поддержку</string>
+    <string name="write_to_support">Написать разработчикам</string>
     <string name="terms_of_use">Пользовательское соглашение</string>
     <string name="dark">Темная тема</string>
+    <string name="applicationSelection">Выбор приложения для отправки</string>
+    <string name="practicum_yandex_">https://practicum.yandex.ru/android-developer/ </string>
+    <string name="searchString">Поиск</string>
+    <string name="nornik2019_gmail_com">nornik2019@gmail.com</string>
+    <string name="playlist_maker">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
+    <string name="Spasibo">Спасибо разработчикам и разработчицам за крутое приложение!</string>
+    <string name="sharing">Отправить сообщение</string>
+    <string name="offer">https://yandex.ru/legal/practicum_offer/</string>
+    <string name="Search">Поиск</string>
+    <string name="title_and_time">%s • %s</string>
+    <string name="run_track">Перейти к треку</string>
+    <string name="imagePoster">Изображение альбома</string>
 
 </resources>

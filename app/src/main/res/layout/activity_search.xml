@@ -1,8 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
+    android:orientation="vertical"
     tools:context=".SearchActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="?attr/colorOnPrimary"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:ignore="TouchTargetSizeCheck">
+
+
+        <ImageView
+            android:id="@+id/imageButton"
+            style="@style/ButtonStyleSearch"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_gravity="start|center"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/ic_strelka2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+
+            android:id="@+id/textView"
+            style="@style/TextViewSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/Search" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/oval"
+        android:paddingLeft="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:src="@drawable/ic_glass"
+            android:background="@color/grey2"/>
+
+        <EditText
+            android:id="@+id/inputEditText"
+            android:layout_width="260dp"
+            android:layout_height="match_parent"
+            android:hint="@string/searchString"
+            android:inputType="text|textNoSuggestions"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <ImageView
+            android:id="@+id/clearIcon"
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:background="@color/grey2"
+            android:foregroundGravity="center|right"
+            android:src="@drawable/ic_clear"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_track"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorOnPrimary"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        tools:listitem="@layout/group_card"
+        tools:itemCount="50"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</LinearLayout>
