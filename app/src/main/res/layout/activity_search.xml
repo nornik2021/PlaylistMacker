@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="1"
     android:background="?attr/colorOnPrimary"
     android:orientation="vertical"
-    tools:context=".SearchActivity">
+    tools:context=".ActivitySearch">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +21,7 @@
 
 
         <ImageView
-            android:id="@+id/imageButton"
+            android:id="@+id/search_goBack"
             style="@style/ButtonStyleSearch"
             android:layout_width="50dp"
             android:layout_height="28dp"
@@ -41,6 +42,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/til_search"
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginStart="16dp"
@@ -51,46 +53,132 @@
         android:paddingEnd="16dp">
 
         <ImageView
+           
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center"
-            android:src="@drawable/ic_glass"
-            android:background="@color/grey2"/>
+            android:background="@color/grey2"
+            android:src="@drawable/ic_glass" />
 
         <EditText
-            android:id="@+id/inputEditText"
+            android:id="@+id/search_input_text"
             android:layout_width="260dp"
             android:layout_height="match_parent"
             android:hint="@string/searchString"
+            android:imeOptions="actionDone"
             android:inputType="text|textNoSuggestions"
+            android:singleLine="true"
             android:textColor="?attr/colorOnSecondary"
-            android:textSize="16sp"
+            android:textSize="15sp"
+
             tools:ignore="TouchTargetSizeCheck" />
 
 
         <ImageView
-            android:id="@+id/clearIcon"
+            android:id="@+id/clear"
             android:layout_width="12dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|end"
             android:background="@color/grey2"
             android:foregroundGravity="center|right"
             android:src="@drawable/ic_clear"
-            android:visibility="visible" />
+            android:visibility="gone" />
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_track"
+
+    <LinearLayout
+        android:id="@+id/search_request_status_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:visibility="gone"
+        android:background="?attr/colorOnPrimary">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:background="?attr/colorOnPrimary"
+            app:srcCompat="@drawable/ic_internet_error" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="20dp"
+            android:gravity="center"
+            android:text="@string/search_tv_update"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSecondary"
+            android:background="?attr/colorOnPrimary" />
+
+        <Button
+            android:id="@+id/btn_update"
+            style="@style/RefreshButton"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:text="@string/search_btn_update_text"
+            android:textAllCaps="false"
+            android:textColor="@color/color_yp_white_black"
+            app:cornerRadius="54dp"
+            tools:ignore="DuplicateIds" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_nothing_found"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="?attr/colorOnPrimary">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/ic_search_error"
+            android:background="?attr/colorOnPrimary"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="20dp"
+            android:gravity="center"
+            android:background="?attr/colorOnPrimary"
+            android:textSize="19sp"
+            android:textColor="?attr/colorOnSecondary"
+            android:text="@string/search_tv_notfound_text"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_track_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="?attr/colorOnPrimary"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
-        tools:listitem="@layout/group_card"
         tools:itemCount="50"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        tools:listitem="@layout/group_card" />
 
 </LinearLayout>

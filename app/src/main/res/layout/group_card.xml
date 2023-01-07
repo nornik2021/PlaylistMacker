@@ -11,9 +11,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/layout_height"
+        android:background="?attr/colorOnPrimary"
         android:paddingStart="5dp"
-        android:paddingEnd="20dp"
-        android:background="?attr/colorOnPrimary">
+        android:paddingEnd="20dp">
 
 
         <ImageView
@@ -29,7 +29,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:background="?attr/colorOnPrimary"
+            tools:src="@drawable/ic_placeholder" />
 
         <TextView
             android:id="@+id/trackName"
@@ -61,7 +62,7 @@
             app:layout_constraintStart_toEndOf="@+id/imagePoster"
             app:layout_constraintTop_toBottomOf="@+id/trackName"
             tools:ignore="MissingConstraints,TextContrastCheck"
-            tools:text="ArtistAndTime" />
+            tools:text="ArtistNameAndTime" />
 
         <ImageView
             android:id="@+id/ygol"

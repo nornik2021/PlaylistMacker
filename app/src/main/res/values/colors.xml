@@ -12,7 +12,14 @@
     <color name="prime_positive">#FFFFFFFF</color>
     <color name="grey">#AEAFB4</color>
     <color name="grey2">#E6E8EB</color>
-    <color name="black2">#000000
-    </color>
-    
+    <color name="black2">#000000</color>
+
+    <color name="color_yp_black_white">@color/yp_black</color>
+    <color name="color_yp_white_black">@color/yp_white</color>
+    <color name="yp_black">#000000</color>
+    <color name="yp_white">#FFFFFFFF</color>
+    <color name="darc_text_color">#1A1B22</color>
+
+
+
 </resources>

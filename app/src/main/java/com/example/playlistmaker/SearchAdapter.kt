@@ -1,5 +1,6 @@
 package com.example.playlistmaker
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.RoundedCorner
 import android.view.View
@@ -9,11 +10,18 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import java.text.SimpleDateFormat
+import java.util.*
 
 class SearchAdapter(
-    private val tracks: List<Track>
+    private var tracks: List<Track>
 ): RecyclerView.Adapter<SearchAdapter.SearchViewHolder>() {
 
+    @SuppressLint("NotifyDataSetChanged")
+    fun setTrackList(tracks: List<Track>) {
+        this.tracks = tracks
+        notifyDataSetChanged()
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.group_card, parent, false)
@@ -48,12 +56,15 @@ class SearchAdapter(
                 .load(track.artworkUrl100)
                 .centerCrop()
                 .transform(RoundedCorners(2))
-                .placeholder(R.drawable.ic_placeholder)
+                // .placeholder(R.drawable.ic_placeholder)
                 .into(imagePoster)
             val template = view.context.getString(R.string.title_and_time)
-            artistNameAndTime.text = String.format(template,track.artistName, track.trackTime)
+            artistNameAndTime.text = String.format(template,track.artistName, track.trackTimeMillis)
+            convertTime(artistNameAndTime.toString())
 
         }
+        private fun convertTime(trackime: String): String =
+            SimpleDateFormat("mm:ss", Locale.getDefault()).format(trackime.toLong())
     }
 
 }
