@@ -35,16 +35,15 @@ class ActivitySearch : AppCompatActivity() {
 
         buttonRefresh.setOnClickListener {
             makeAllInvisible()
-            sendARequest()
+            sendRequest()
         }
 
         val clearButton = findViewById<ImageView>(R.id.clear)
-        textInput.requestFocus()
-        hideKeyboard(textInput)
+
         textInput.setOnEditorActionListener { _, actionId, _ ->
             makeAllInvisible()
             if (actionId == EditorInfo.IME_ACTION_DONE && textInput.text.isNotEmpty()) {
-                sendARequest()
+                sendRequest()
                 true
             } else false
         }
@@ -83,7 +82,7 @@ class ActivitySearch : AppCompatActivity() {
         textInputLayout = findViewById(R.id.til_search)
     }
 
-    private fun sendARequest() {
+    private fun sendRequest() {
         ApiURL.apiServ.search(textInput.text.toString())
             .enqueue(object : Callback<ApiResponseApp> {
                 override fun onResponse(
@@ -93,10 +92,10 @@ class ActivitySearch : AppCompatActivity() {
                     when {
                         response.code() == 200 -> {
                             if (response.body()?.resultCount != 0) {
-                                val convert = Convert()
+                                val converter = Converter()
                                 response.body()
                                     ?.results
-                                    ?.map { convert.convert(it) }
+                                    ?.map { converter.convert(it) }
                                     ?.apply { installScreen(SearchScreenStatus.Result(this)) }
 
                             } else {
@@ -124,7 +123,7 @@ class ActivitySearch : AppCompatActivity() {
     }
 
     companion object {
-        private val EDIT_TEXT_KEY = "EDIT_TEXT_KEY"
+        private const val EDIT_TEXT_KEY = "EDIT_TEXT_KEY"
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

@@ -33,11 +33,13 @@ class AdapterTracks : RecyclerView.Adapter<AdapterTracks.ListViewHolder>() {
             Glide.with(view.context)
                 .load(track.artworkUrl100)
                 .fitCenter()
-                .transform(RoundedCorners(2))
-                .placeholder(R.drawable.ic_placeholder).into(photoTrack)
+                .transform(RoundedCorners(5))
+                .placeholder(R.drawable.ic_placeholder)
+                .into(photoTrack)
             val example = view.context.getString(R.string.title_and_time)
             trackArtistTime.text = String.format(example, convertTime(track.trackTimeMillis?: ""), track.artistName)
         }
+        private fun convertTime(trackTime: String): String = SimpleDateFormat("mm:ss", Locale.getDefault()).format(trackTime.toLong())
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.group_card, parent, false)
@@ -49,6 +51,6 @@ class AdapterTracks : RecyclerView.Adapter<AdapterTracks.ListViewHolder>() {
     override fun getItemCount(): Int {
         return tracks.size
     }
-    private fun convertTime(trackTime: String): String = SimpleDateFormat("mm:ss", Locale.getDefault()).format(293000L)
+
 
 }
