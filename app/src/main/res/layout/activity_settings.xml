@@ -9,7 +9,7 @@
     tools:context=".SearchActivity">
 
     <LinearLayout
-        android:id="@+id/layout"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/layout_layout_marginLeft"
@@ -19,21 +19,21 @@
 
         <Button
             style="@style/ButtonStyle3"
-            android:id = "@+id/vector"
             android:text="@string/setting"
             app:icon="@drawable/ic_strelka" />
 
     </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/lists"
-        android:layout_width="369dp"
+
+        android:layout_width="match_parent"
+        android:paddingEnd="@dimen/paddingEnd"
         android:layout_height="@dimen/relative_height"
         android:layout_marginTop="80px"
         android:background="?attr/colorOnPrimary">
 
         <TextView
-            android:id="@+id/ys_regular_"
+
             style="@style/TextView1"
             android:text="@string/dark">
 
@@ -52,15 +52,16 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/lists2"
-        android:layout_width="394dp"
+
+        android:layout_width="match_parent"
+        android:paddingEnd="@dimen/paddingEnd"
         android:layout_height="@dimen/relative_height"
         android:layout_marginTop="0dp"
         android:backgroundTint="?attr/colorOnPrimary">
 
 
         <TextView
-            android:id="@+id/ys_regular_2"
+
             style="@style/TextView1"
             android:text="@string/share_The_App" />
 
@@ -72,8 +73,9 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/lists3"
-        android:layout_width="394dp"
+
+        android:layout_width="match_parent"
+        android:paddingEnd="@dimen/paddingEnd"
         android:layout_height="@dimen/relative_height"
         android:layout_marginTop="0dp"
         android:backgroundTint="?attr/colorOnPrimary"
@@ -86,7 +88,7 @@
             android:src="@drawable/ic_group" />
 
         <TextView
-            android:id="@+id/ys_regular_3"
+
             style="@style/TextView1"
             android:text="@string/write_to_support">
 
@@ -94,8 +96,9 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/lists4"
-        android:layout_width="394dp"
+
+        android:layout_width="match_parent"
+        android:paddingEnd="@dimen/paddingEnd"
         android:layout_height="@dimen/relative_height"
         android:layout_marginTop="0dp"
         android:backgroundTint="?attr/colorOnPrimary">
